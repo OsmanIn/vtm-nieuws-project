@@ -1,0 +1,195 @@
+@import "../node_modules/basiclightbox/src/styles/main.scss";
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/mixins";
+body {
+  display: flex;
+  background-color: #000;
+  font-family: "Open Sans";
+  //margin-top: 25px;
+}
+#listSection {
+  display: flex;
+  width: 550px; /* this is the boss ;-) */
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  // border: 1px solid gray;
+  border-radius: 10px;
+
+  h1 {
+    position: absolute;
+    top: 0px;
+    background-color: #41b3a3; ///#3498db;
+    color: white;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  div.list {
+    //display: block;
+    // needs to be width 100%;
+    height: auto;
+    background-color: #313d4b;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    div.listitem {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px;
+      position: relative;
+      .videoID {
+        display: none;
+      }
+      // needs to be width 100%;
+      img {
+        display: block;
+        width: 40%;
+        height: auto;
+        border-radius: 10px;
+        //height: 105px;
+        //width: 200px;
+      }
+      h3 {
+        width: 56%;
+        margin-left: 10px;
+        //display: block;
+        color: white;
+      }
+      p {
+        color: #e62739;
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+      }
+    }
+  }
+  div.pagination {
+    border-top: 1px solid gray;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    //height: 25px;
+    display: inline-flex;
+    background-color: #e62739;
+    border-radius: 0px 0px 10px 10px;
+    // your pagination jumps because it jumps to top when no li's
+    //so position absolute @ bottom // always!
+    // needs to be width 100%;
+    .prev {
+      color: white;
+      margin-left: 10px;
+      line-height: 20px;
+    }
+    .pager {
+      margin: 0 auto;
+      color: white;
+    }
+    .next {
+      float: right;
+      margin-right: 10px;
+      color: white;
+      //line-height: 20px;
+    }
+  }
+  div.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #41b3a3; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -60px;
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  #listSection {
+    // display: flex;
+    // height: auto;
+    width: 450px;
+  }
+  img {
+    width: 180px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #listSection {
+    width: 375px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #listSection {
+    width: 320px;
+    p {
+      display: none;
+    }
+  }
+}
+
+//   div.listitem {
+//     p {
+//       display: none;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 450px) {
+//   #listSection {
+//     width: 375px !important;
+//     //height: auto;
+//     //display: block;
+//   }
+// }
+
+// div.slider {
+//   //display: flex;
+//   // needs to be width 100%;
+//   background-color: #313d4b;
+//   border-radius: 0px 0px 10px 10px;
+//   margin-top: 750px;
+// }
+// div.slideritem {
+//   display: flex;
+//   margin: 10px;
+//   position: relative;
+//   .videoID {
+//     display: none;
+//   }
+//   // needs to be width 100%;
+//   img {
+//     border-radius: 10px;
+//     height: 105px;
+//     width: 200px;
+//   }
+//   h1 {
+//     margin-left: 10px;
+//     //display: block;
+//     color: white;
+//   }
+//   p {
+//     color: #e62739;
+//     position: absolute;
+//     bottom: 0px;
+//     right: 0px;
+//   }
+// }
