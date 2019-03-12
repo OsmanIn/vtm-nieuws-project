@@ -140,9 +140,9 @@ body {
 @media screen and (max-width: 320px) {
   #listSection {
     width: 320px;
-    p {
-      display: none;
-    }
+    // .listitem p {
+    //   display: none;
+    // }
   }
 }
 

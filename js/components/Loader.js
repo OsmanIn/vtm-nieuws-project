@@ -1,6 +1,5 @@
 export default class Loader {
   constructor(holder) {
-    // this._visible = visible;
     this._holder = holder;
     this._loaderHtml = this.generateHtml();
   }
